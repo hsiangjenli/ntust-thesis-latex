@@ -1,25 +1,19 @@
-% this file is encoded in utf-8
-% v1.7
+% v1.8
 
 \documentclass[12pt, a4paper]{ntust_report} 
 
 \usepackage{fontspec}                           % 加這個就可以設定字體 
 \usepackage{xeCJK}                              % 讓中英文字體分開設置 
-% \usepackage[indentfirst=true]{xeCJK}
-%\setmainfont{Arial}                        
 \setmainfont[Mapping=tex-text]{Times New Roman} % 設定主要字型，也就是英文字型 
-%\setmainfont{Linux Libertine O}
-%\setmainfont{Junicode}
 \setCJKmainfont{AR PL UKai TW}                  % 設定中文字型 
 \setCJKmonofont{AR PL UKai TW}
-% \setCJKmainfont{標楷體}
+
 \XeTeXlinebreaklocale "zh"                      % 這兩行一定要加，中文才能自動換行 
 \XeTeXlinebreakskip = 0pt plus 1pt              % 這兩行一定要加，中文才能自動換行
 
-
-
-\input{common_env}                              % 基本的環境設定  無需改變  
-
+\input{env/common}                              % 基本的環境設定  無需改變
+% \input{env/use_chinese}                         % 使用中文的設定  無需改變
+\input{env/use_english}						 	% 使用英文的設定  無需改變
 % ---------------------------------------------------------------------------------
 % 自己需要的package，可以需要增刪
 % \usepackage{adjustbox}
@@ -48,7 +42,7 @@
         \newcommand{\key}[1]{\textcolor{red}{#1}}
         \bibliographystyle{plainnat}
         	
-        \input{chinese_trans} % 在此檔案處定義文章中的中文名詞
+        % \input{chinese_trans} % 在此檔案處定義文章中的中文名詞
 
 	% ---------------------------------------------------------------------------------
 	% % % 以下是載入前頁、本文、後頁
@@ -75,12 +69,10 @@
 	% 在撰寫各章草稿時，可以把其他章節關掉 (行首加百分號)
 	% \input{example/example_body.tex} % 所附的範例
 
-	
-
 	\input{sections/ch1_intro.tex}
 	\input{sections/ch2_related_work}
-    \input{sections/ch3_method}
-    \input{sections/ch4_experiment}
+	\input{sections/ch3_method}
+	\input{sections/ch4_experiment}
 	\input{sections/conclusion.tex}
 	
     % ---------------------------------------------------------------------------------

@@ -748,9 +748,9 @@
     \noindent
     \hb@xt@1.8em{\hss\@makefnmark}#1}
 \newcommand\contentsname{Contents}
-\newcommand\listalgorithmname{List of Algorithms}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
+\newcommand\listalgorithmname{List of Algorithms}
 \newcommand\bibname{Bibliography}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}
