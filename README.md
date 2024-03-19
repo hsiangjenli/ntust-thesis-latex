@@ -25,7 +25,7 @@ docker pull hsiangjenli/xelatex:ntust-thesis-v1.8.1
 docker run --rm -v $(pwd):/workspace hsiangjenli/xelatex:ntust-thesis-v1.8.1
 
 # Enter the docker container and compile the LaTeX files
-# Then you will see the pdf file in the current directory
+# Then you will see the pdf file in build folder
 make pdf
 ```
 
