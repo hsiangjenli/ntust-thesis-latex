@@ -110,7 +110,13 @@
 \fi
 \DeclareOption{11pt}{\renewcommand\@ptsize{1}}
 \DeclareOption{12pt}{\renewcommand\@ptsize{2}}
-%\DeclareOption{13pt}{\renewcommand\@ptsize{3}}
+\DeclareOption{14pt}{\IfFileExists{size14.clo}%
+  {\renewcommand\@ptsize{4}}%
+  {\renewcommand\@ptsize{2}%
+   \ClassError{\@classname}{You cannot use option `14pt'}%
+     {File `size14.clo' not found.
+      LaTeX package `extsizes' is not installed^^J%
+      properly in your system.}}}
 \if@compatibility\else
 \DeclareOption{oneside}{\@twosidefalse \@mparswitchfalse}
 \fi
@@ -663,7 +669,7 @@
 \newcommand*\l@subsubsection{\@dottedtocline{3}{7.0em}{4.1em}}
 \newcommand*\l@paragraph{\@dottedtocline{4}{10em}{5em}}
 \newcommand*\l@subparagraph{\@dottedtocline{5}{12em}{6em}}
-\newcommand\listoffigures{%
+\newcommand\listoffigures{
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -742,6 +748,7 @@
     \noindent
     \hb@xt@1.8em{\hss\@makefnmark}#1}
 \newcommand\contentsname{Contents}
+\newcommand\listalgorithmname{List of Algorithms}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
 \newcommand\bibname{Bibliography}

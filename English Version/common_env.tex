@@ -1,53 +1,50 @@
-% Unless school modifies the thesis format (margins, header, footer, watermark)
-% or needs to improve the use of LaTeX packages,
-% or needs to change the default fonts or the encoding,
-% then there is no need to modify the content inside this file.
-% For thesis writing personalization, please modify the files starting with 'my_'
+% 除非校方修改了論文格式 (margins, header, footer, 浮水印)
+% 或者需要增加所用的 LaTeX 套件，
+% 或者要改預設中文字型、編碼
+% 否則毋須修改本檔內容
+% 論文撰寫，請修改以 my_  開頭檔名的各檔案
+\usepackage{subcaption}
+% \usepackage{subfig}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{titlecaps}
+% \usepackage[nospace]{cite}  % for smart citation
+\usepackage{geometry}  % for easy margin settings
+%\usepackage[dvipdfm]{graphicx}  % for graphic   using eps
+\usepackage{graphicx}  % for graphic   using eps
+\usepackage[graphicx]{realboxes}
 
-\usepackage[nospace]{cite}  		% for smart citation
-\usepackage{geometry}  				% for easy margin settings
-%\usepackage{subfigure}  			% for subfigure
-%\usepackage[dvipdfm]{graphicx}  	% for graphic using eps
-%\usepackage[xetex]{graphicx}
-%\usepackage{graphicx}  			% for graphic using eps
+%\usepackage{epstopdf} % 當使用pdflatex時打開，如使用latex則不需開啟，此功能為將xxx.eps 自動判讀為XXX.pdf
 
-\usepackage{epstopdf} 				% for automatic transformation (eps to pdf) while using pdflatex
+\usepackage{algpseudocodex}
+\usepackage{amsmath}
+% \usepackage[ruled,vlined,linesnumbered,commentsnumbered,longend]{algorithm2e} 
 
-%\usepackage{algorithmic}  			% for algorithm
-\usepackage{algorithm}
-\usepackage{algorithmicx}
-\usepackage{algpseudocode}
-
-%
 % margins setting
 \geometry{verbose,a4paper,tmargin=3.5cm,bmargin=2cm,lmargin=3cm,rmargin=3cm}
-%
-\usepackage{amsmath} 				% for mathematical function (AMS Format)
-%\usepackage{amssymb} 				% for mathematical symbol (AMS Format)
-										% if 'amssymb' and 'Xunicode' conflict, please put 'amssymb' beforehand
-\usepackage{mathrsfs} 				% for cursive mathematical symbol,
-										% for example, typing '\mathscr{E} may result 'cursive E'
-\usepackage{listings} 				% for listing any programming code
-%
+
+\usepackage{amsmath} % 各式 AMS 數學功能
+\usepackage{mathrsfs} %草寫體數學符號，在數學模式裡用 \mathscr{E} 得草寫 E
+\usepackage{listings} % 程式列表套件
+
 % listing setting
-\lstset{breaklines=true,			% a long line of code can be broken into lines of code
-extendedchars=false,				
-texcl=true,							
-comment=[l]\%\%,					
-basicstyle=\small,					% approximately 10 pt
-commentstyle=\upshape,				% the default is 'italics', so set it upright
-%language=Octave 					% some 'octave' instruction will appear in bold
+\lstset{breaklines=true,% 過長的程式行可斷行
+extendedchars=false,% 中文處理不需要 extendedchars
+texcl=true,% 中文註解需要有 TeX 處理過的 comment line, 所以設成 true
+comment=[l]\%\%,% 以雙「百分號」做為程式中文註解的起頭標記，配合 MATLAB
+basicstyle=\small,% 小號字體, 約 10 pt 大小
+commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改用正體
+%language=Octave % 會將一些 octave 指令以粗體顯示
 }
 
-\usepackage{url} 					% for trackbacking URL in the document; usage: \url{http://www.ntust.edu.tw}
+\usepackage{url} % 在文稿中引用網址，可以用 \url{http://www.ntust.edu.tw} 方式
 
-% Illustration package: graphicx
-	% whether users using 'pdftex' or 'latex + dvipdfmx' for their workflow?
-	% each case may have different parameters
-	% the following automatic decision
-	% refered from
-	% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=ifpdf
-
+% 插圖套件 graphicx
+% 使用者工作流程是用 pdftex 還是 latex + dvipdfmx?
+% 視情況而有不同的參數
+% 這裡作自動判斷
+% 參考自
+% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=ifpdf
 %\newcommand\mydvipdfmxflow{dvipdfmx}
 %\newcommand\mypdftexflow{pdftex}
 %
@@ -74,28 +71,24 @@ commentstyle=\upshape,				% the default is 'italics', so set it upright
 %  \fi
 %\fi
 
-\usepackage{fancyhdr}  				% Extra package for putting the watermark
-% (Occupy central header)
-% Users who do not need watermark can still utilize this package to produce the desired header and footer
+\usepackage{fancyhdr}  % 借用增強功能型 header 套件來擺放浮水印 
+% (佔用了 central header)
+% 不需要浮水印的使用者仍可利用此套件，產生所需的 header, footer
 %
-% Start fancy header/footer package
+% 啟動 fancy header/footer 套件
 \pagestyle{fancy}
-\fancyhead{}  						% reset left, central, right header to empty
-\fancyfoot[C]{\thepage} 			% middle footer for page number
-\renewcommand{\headrulewidth}{0pt} 	% header straight line; 0pt (no line)
+\fancyhead{}  % reset left, central, right header to empty
+\fancyfoot[C]{\thepage} %中間 footer 擺放頁碼
+\renewcommand{\headrulewidth}{0pt} % header 的直線; 0pt 則無線
 
-% If you need the watermark, please uncomment the following '\input' line
+% 如果不需要任何浮水印，則請把下列介於 >>> 與 <<< 之間
+% 的文字行關掉 (行首加上百分號)
 %% 浮水印 >>> 
-%\input{watermark/ntust_watermark.tex}
+\input{figures/watermark/ntust_watermark.tex}
 %% <<< 浮水印
 
-%
 % global page layout
-\newcommand{\mybaselinestretch}{1.5}  					% Line space: 1.5 times + 20%, (approximately double space)
-\renewcommand{\baselinestretch}{\mybaselinestretch}  	% Thesis line space presets
-\parskip=2ex  						% Spacing between paragraphs is equal to two heights of x
-\parindent = 24Pt  					% The retraction of first paragraph is controlled by CJK, this setting cancel it
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  end of preamble
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mybaselinestretch}{1.5}  %行距 1.5 倍 + 20%, (約為 double space)
+\renewcommand{\baselinestretch}{\mybaselinestretch}  % 論文行距預設值
+\parskip=2ex  % 段落之間的間隔為兩個 x 的高度
+\parindent = 24Pt  % 段首內縮由 CJK 控制，所以這裡就設成不內縮
