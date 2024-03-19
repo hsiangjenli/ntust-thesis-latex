@@ -1,1 +1,26 @@
 \chapter{Experiments and Results}
+
+\newcommand{\annot}[1]{$\triangleright$ {\footnotesize \texttt{ #1 }}}
+\begin{algorithm}
+
+    \caption{Explore Cats}\label{alg:explore_ocean}
+
+    \KwIn{Cats}
+    \KwOut{Mystery}
+    
+    \textbf{Record} = [] \annot{Initialize the record}
+
+    \For{cat $\in$ Cats}{
+        \annot{Explore the cat}
+        
+        \If{cat == mysterious}{
+            \textbf{Record} += cat \annot{Record the mysterious cat}
+        }
+
+        \Else{
+            \text{continue} \annot{Continue exploring}
+        }
+    }
+
+
+\end{algorithm}
