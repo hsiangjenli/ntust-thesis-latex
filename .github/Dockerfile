@@ -5,7 +5,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /workspace
 
-COPY assets /usr/share/fonts
 COPY texlive.profile .
 
 RUN apt update &&\
@@ -24,6 +23,8 @@ RUN ./install-tl-*/install-tl -profile texlive.profile -repository http://ftp.ma
 ENV PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 ENV PATH="/usr/local/texlive/2023/bin/aarch64-linux:$PATH"
 ENV PATH="/usr/local/texlive/2023/bin/armhf-linux:$PATH"
+
+COPY assets /usr/share/fonts
 
 RUN tlmgr update --self --all --reinstall-forcibly-removed &&\
     luaotfload-tool -v -vvv -u &&\
