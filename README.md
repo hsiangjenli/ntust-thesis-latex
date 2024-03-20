@@ -44,6 +44,9 @@ make pdf
    - The dissertation content is in this folder.  
    - You need to modify the content of each file and input it in [`my_ntust_thesis.tex`](my_ntust_thesis.tex).
 
+## Official NTUST Thesis Format
+- 論文上傳步驟說明 - https://etheses.lib.ntust.edu.tw/zh-hant/help/aboutedit/
+- 國立臺灣科技大學學位論文撰寫、編排規則及注意事項（112.03.07）- https://etheses.lib.ntust.edu.tw/media/download/ed6370c8-7c81-11ee-b999-0242ac1f0806.pdf
 ## Credits to
 - Original author - Ding-Jie Huang 黃鼎傑 - http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html
 - Modified by - Hadziq Fabroyir - https://github.com/hadziq/ntust-thesis
