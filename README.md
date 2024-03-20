@@ -2,7 +2,7 @@
     <h1>NTUST - Thesis - LaTeX Template</h1>
 
 [![](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/hsiangjenli/xelatex/general)
-[![](https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white)](https://www.overleaf.com/read/wqwfhdmydncy#5d05e0)
+[![](https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white)](https://www.overleaf.com/latex/templates/ntust-thesis-latex-v1-dot-8-1/zhssqbmtcsjp)
 [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hsiangjenli/ntust-thesis-latex)
 
 </div>
@@ -10,6 +10,8 @@
 This is a LaTeX template for NTUST (National Taiwan University of Science and Technology) thesis. It is based on [`ntust-thesis`](https://github.com/hadziq/ntust-thesis) by ***Hadziq Fabroyir***, which is a modified version of the original [`ntust-thesis-latex-v15`](http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html) by ***Ding-Jie Huang***. 
 
 You can use this template to write your thesis in LaTeX, and it can be easily used with Overleaf or using the docker image provided in this repository.
+
+> Feel free to open an issue or pull request if you have any questions or suggestions 😶 
 
 ## Overleaf
 Go to Settings and change the (1) Compiler to `XeLaTeX` (2) TeX Live version to `2023` and (3) Main document to `my_ntust_thesis.tex`.
@@ -21,8 +23,8 @@ You can use the provided docker image to compile the LaTeX files or you can buil
 # Pull the docker image from the docker hub
 docker pull hsiangjenli/xelatex:ntust-thesis-v1.8.1
 
-# Run the docker image
-docker run --rm -v $(pwd):/workspace hsiangjenli/xelatex:ntust-thesis-v1.8.1
+# Run the docker image, mount the current directory to the /workspace in the docker container
+docker run -it --rm -v `pwd`:/workspace hsiangjenli/xelatex:ntust-thesis-v1.8.1 /bin/bash
 
 # Enter the docker container and compile the LaTeX files
 # Then you will see the pdf file in build folder
@@ -54,3 +56,4 @@ make pdf
 - NKUST - https://github.com/yuhao-kuo/NKUST-thesis-template
 - 台灣碩博士 LaTeX 論文樣板 - https://github.com/sppmg/TW_Thesis_Template
 - Pandoc Template for NTU Thesis - https://github.com/liao961120/thesis
+
