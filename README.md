@@ -16,6 +16,10 @@ You can use this template to write your thesis in LaTeX, and it can be easily us
 ## Overleaf
 Go to Settings and change the (1) Compiler to `XeLaTeX` (2) TeX Live version to `2023` and (3) Main document to `my_ntust_thesis.tex`.
 
+> 💡 The template is available on Overleaf, however, the template ***will not be updated frequently*** on Overleaf, so it is recommended to **download / clone** the repository and put it on your Overleaf account.
+
+
+
 ## Docker
 You can use the provided docker image to compile the LaTeX files or you can build the docker image by yourself, the Dockerfile is provided in [`.github/Dockerfile`](.github/Dockerfile), and you can modify it according to your needs.
 
@@ -47,6 +51,19 @@ make pdf
 ## Official NTUST Thesis Format
 - 論文上傳步驟說明 - https://etheses.lib.ntust.edu.tw/zh-hant/help/aboutedit/
 - 國立臺灣科技大學學位論文撰寫、編排規則及注意事項（112.03.07）- https://etheses.lib.ntust.edu.tw/media/download/ed6370c8-7c81-11ee-b999-0242ac1f0806.pdf
+
+## Other useful tools for writing LaTeX
+- [egeerardyn/awesome-LaTeX](https://github.com/egeerardyn/awesome-LaTeX)
+- [FFengIll/pdf-cut-white](https://github.com/FFengIll/pdf-cut-white)
+- [google/latexify_py](https://github.com/google/latexify_py) - A library to generate LaTeX expressions from Python code
+- [google-research/arxiv-latex-cleaner](https://github.com/google-research/arxiv-latex-cleaner) - Easily clean the LaTeX code of your paper to submit to arXiv
+- [xinychen/awesome-latex-drawing](https://github.com/xinychen/awesome-latex-drawing) - 
+A collection of illustrations in LaTeX.
+- [lericson/pseudopython](https://github.com/lericson/pseudopython/tree/master) - Do you hate writing pseudocode in LaTeX? Good news! Do it in Python instead.
+- [DaemonLab/Latex-Pseudocode-Generator](https://github.com/DaemonLab/Latex-Pseudocode-Generator) - Take the input of C++ into pseudocode in LaTeX
+- [vedku/Python-to-IGCSE-Pseudocode](https://github.com/vedku/Python-to-IGCSE-Pseudocode)
+- [Kixiron/JunkyPy](https://github.com/Kixiron/JunkyPy) - A C# pseudocode generator written in Python
+
 ## Credits to
 - Original author - Ding-Jie Huang 黃鼎傑 - http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html
 - Modified by - Hadziq Fabroyir - https://github.com/hadziq/ntust-thesis
