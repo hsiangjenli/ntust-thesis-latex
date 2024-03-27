@@ -59,10 +59,16 @@ make pdf
 - [google-research/arxiv-latex-cleaner](https://github.com/google-research/arxiv-latex-cleaner) - Easily clean the LaTeX code of your paper to submit to arXiv
 - [xinychen/awesome-latex-drawing](https://github.com/xinychen/awesome-latex-drawing) - 
 A collection of illustrations in LaTeX.
-- [lericson/pseudopython](https://github.com/lericson/pseudopython/tree/master) - Do you hate writing pseudocode in LaTeX? Good news! Do it in Python instead.
+- [lericson/pseudopython](https://github.com/lericson/pseudopython/tree/master) - Do you hate writing pseudocode in LaTeX? Good news! Do it in Python instead
 - [DaemonLab/Latex-Pseudocode-Generator](https://github.com/DaemonLab/Latex-Pseudocode-Generator) - Take the input of C++ into pseudocode in LaTeX
 - [vedku/Python-to-IGCSE-Pseudocode](https://github.com/vedku/Python-to-IGCSE-Pseudocode)
 - [Kixiron/JunkyPy](https://github.com/Kixiron/JunkyPy) - A C# pseudocode generator written in Python
+- [lukas-blecher/LaTeX-OCR](https://github.com/lukas-blecher/LaTeX-OCR)
+- [HarisIqbal88/PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet)
+- [nschloe/tikzplotlib](https://github.com/nschloe/tikzplotlib) - Save matplotlib figures as TikZ/PGFplots
+- [rstudio/gt](https://github.com/rstudio/gt) - Generate information-rich, publication-quality tables from R
+- [yishn/tikzcd-editor](https://github.com/yishn/tikzcd-editor) - A simple visual editor for creating commutative diagrams
+- [texworld/betterbib](https://github.com/texworld/betterbib) - Command-line tools for bibliographies
 
 ## Credits to
 - Original author - Ding-Jie Huang 黃鼎傑 - http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html
