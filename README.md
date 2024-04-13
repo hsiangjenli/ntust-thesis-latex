@@ -70,6 +70,42 @@ A collection of illustrations in LaTeX.
 - [yishn/tikzcd-editor](https://github.com/yishn/tikzcd-editor) - A simple visual editor for creating commutative diagrams
 - [texworld/betterbib](https://github.com/texworld/betterbib) - Command-line tools for bibliographies
 
+## Cheat Sheet
+
+### Math formula
+On this [site](https://katex.org/docs/supported.html) you can find a lot of math symbols that you can use in LaTeX. 
+
+| Command | Description |
+| ------- | ----------- |
+| `\nonumber` | Remove the equation number |
+
+### Pseudocode (Algorithm2e)
+
+There are some useful options and commands for using the `algorithm2e` package. If you want to see the full documentation, you can visit the official website [here](https://ctan.org/pkg/algorithm2e).
+
+| Option | Description |
+| ------ | ----------- |
+| `ruled` | Show Caption |
+| `noline` | Remove the vertical line withing the block |
+| `linesnumbered` | Show line numbers |
+
+| Command | Description |
+| ------- | ----------- |
+| `\caption` | Add a caption to the pseudocode |
+| `\KwIn` | Input keyword |
+| `\KwOut` | Output keyword |
+| `\KwData` | Data keyword |
+| `\KwResult` | Result keyword |
+| `\For{condition}{do something}` | For loop |
+| `\If{condition}{do something}` | If condition |
+| `\Else{do something}` | Else |
+| `\eIf{condition}{do something}` | Else if condition |
+| `\While{condition}{do something}` | While loop |
+| `\ForEach{condition}{do something}` | For each loop |
+| `\tcc{annotation}` | Comment |
+| `\tcp{annotation}` | Comment |
+| `\SetAlgoLined` | Show the `end` keyword at the end of the block |
+
 ## Credits to
 - Original author - Ding-Jie Huang 黃鼎傑 - http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html
 - Modified by - Hadziq Fabroyir - https://github.com/hadziq/ntust-thesis
