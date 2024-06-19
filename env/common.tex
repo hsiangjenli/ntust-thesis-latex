@@ -125,3 +125,9 @@ commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改�
   #1%
   \let\CJKsymbol\CJKoldsymbol
   \let\CJKpunctsymbol\CJKoldpunctsymbol}
+
+% Chapter style
+\def\chapterfontsize{20pt}
+\newlength{\chaptertitlespacing}
+\setlength{\chaptertitlespacing}{\dimexpr \chapterfontsize + \chapterfontsize / 2 \relax}
+\titlespacing{\chapter}{0pt}{-3\topskip}{\chaptertitlespacing}

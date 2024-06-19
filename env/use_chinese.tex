@@ -25,3 +25,8 @@
 \newcommand{\nameSlist}{符號說明}
 \newcommand{\nameRef}{參考文獻}
 \newcommand{\nameVita}{自傳}
+
+% -- Chapter style
+\usepackage{zhnumber}
+
+\titleformat{\chapter}{\centering\normalfont\huge\bfseries}{第\zhnumber{\thechapter} 章}{\chapterfontsize}{\Huge}
