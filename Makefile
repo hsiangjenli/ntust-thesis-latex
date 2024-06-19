@@ -6,7 +6,7 @@ image:
 	docker build -t $(image) .github
 
 exec:
-	docker run -it --rm -v $(PWD):/workspace $(image) /bin/bash
+	docker run -it --rm -v "$(PWD):/workspace" $(image) /bin/bash
 
 pdf:
 	mkdir -p build
